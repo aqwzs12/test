@@ -1,2 +1,2 @@
-back/src/node_module
-front/src/node_module
+/back/src/node_modules
+/front/src/node_modules
