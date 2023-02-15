@@ -1,12 +1,24 @@
 version: '2'
 services:
-  web:
-    container_name: node_test
+  back:
+    container_name: back
     build: 
       context: .
-      dockerfile: ./docker/node/Dockerfile
+      dockerfile: ./docker/back/Dockerfile
     volumes:
       - ./back/src:/usr/src/app
     ports:
       - "8080:8080"
+
+  front:
+    container_name: front
+    build: 
+      context: .
+      dockerfile: ./docker/front/Dockerfile
+    volumes:
+      - ./front:/usr/src/app
+    ports:
+      - "80:80"
+    
+
     
